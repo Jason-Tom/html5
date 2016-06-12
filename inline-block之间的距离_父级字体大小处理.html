@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block之间的距离_父级字体大小处理</title>
+    <style type="text/css" media="screen">
+    /*inline会被里面的block（inline-block）元素撑开当成block（inline-block）元素*/
+    
+    .img {
+        position: relative;
+        width: 20%;
+        margin: 0px;
+    }
+    
+    .div {
+        font-size: 0px;
+        position: absolute;
+        width: 100%;
+        background-color: yellow;
+    }
+    
+    body {
+        margin: 0px;
+    }
+    
+    span {
+        /*里面字体大小再强制改变*/
+        font-size: 30px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <img class="img" src="0.jpg" alt="">
+        <span>lalala</span>
+        <span class="label label-info">Label</span>
+    </div>
+</body>
+
+</html>

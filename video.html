@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css" media="screen">
+    body {
+        margin: 0px;
+    }
+    
+    .video {
+        width: 20%;
+        /*margin使用负值去除空格*/
+/*        margin-left: -4px;
+        margin-right: -4px;*/
+        border-radius: 3px;
+        box-shadow: 1px 1px 1px 1px green;
+    }
+    </style>
+    <title>html5</title>
+</head>
+
+<body>
+    <div>
+        <!-- <video src="http://www.w3school.com.cn/i/movie.ogg" controls="controls"></video> -->
+        <!-- <video src="movie.ogg" controls="controls"></video> -->
+        <!-- <video src="movie.mp4" controls="controls"></video> -->
+        <!-- 大小通过样式控制 -->
+        <video class="video" controls="autoplay">
+            <!-- 放多种格式 -->
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+            <!-- 提示语 -->
+        </video><video class="video" controls="autoplay" loop="loop">
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+        </video><video class="video" controls="autoplay" loop="loop" autoplay="autoplay">
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+        </video><video class="video" loop="loop" autoplay="autoplay">
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+        </video><video class="video" loop="loop" autoplay="autoplay">
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+        </video><video style="margin-top: -4px;" class="video" preload="auto" loop="loop" autoplay="autoplay">
+            <source src="movie.ogg" type="video/ogg">
+            <source src="movie.mp4" type="video/mp4">
+        </video>
+    </div>
+</body>
+
+</html>

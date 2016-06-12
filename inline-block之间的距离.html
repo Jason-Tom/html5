@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block之间的距离</title>
+    <style type="text/css" media="screen">
+    /*inline会被里面的block（inline-block）元素撑开当成block（inline-block）元素*/
+    
+    .img {
+        display: inline-block;
+        width: 20%;
+        margin: 0px;
+    }
+    
+    .div {
+        display: inline-block;
+        margin: 0px;
+    }
+    
+    .div {
+        display: flex;
+        flex-flow: row wrap;
+        align-items: flex-start;
+        margin: 0px;
+        background-color: yellow;
+    }
+    body {
+        margin: 0px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="div">
+        <img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt="">
+    </div>
+    <div class="">
+        <img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt=""><img class="img" src="0.jpg" alt="">
+    </div>
+</body>
+
+</html>
