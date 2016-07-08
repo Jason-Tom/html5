@@ -1,0 +1,16 @@
+<!DOCTYPE HTML>
+<html>
+<!-- 音频属性和视频控制属性相似,只是没有独自的宽高调节属性，但是都能通过样式来调节大小 -->
+
+<body>
+    <!-- controls这个属性可以有音频操作界面，没有的话可以当背景音乐使用 -->
+    <audio controls="controls" autoplay="autoplay" loop="loop">
+        <!-- 自己的MP3文件能用 -->
+        <source src="start.mp3" type="audio/mpeg">
+    </audio>
+    <!-- 可以调用链接视频，不是xml和json数据不存在跨域问题 -->
+    <audio src="http://www.w3school.com.cn/i/song.mp3" controls="controls" style="width: 900px;height: 300px;background-color: yellow;padding:0px;">
+    </audio>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo">点击这个按钮，获得您的坐标：</p>
+    <button onclick="getLocation()">试一下</button>
+    <span>维度</span>
+    <span>经度</span>
+    <script>
+    var x = document.getElementById("demo");
+
+    function getLocation() {
+        // geolocation判断是否支持定位
+        if (navigator.geolocation) {
+            // 获取定位集合
+            navigator.geolocation.getCurrentPosition(lalala);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
+        }
+    }
+
+    function lalala(hahaha) {
+        x.innerHTML = "Latitude: " + hahaha.coords.latitude +
+            "<br />Longitude: " + hahaha.coords.longitude;
+        var a = document.getElementsByTagName('span')
+        a[0].innerHTML = hahaha.coords.latitude;
+        a[1].innerHTML = hahaha.coords.longitude;
+    }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <style type="text/css">
+    #div1 {
+        width: 120px;
+        height: 100px;
+        padding: 0px;
+        border: 1px solid #aaaaaa;
+    }
+    
+    #div2 {
+        width: 120px;
+        height: 100px;
+        padding: 0px;
+        border: 1px solid #aaaaaa;
+    }
+    /*固定相应大小，会前置压缩*/
+    
+    #drag1 {
+        width: 120px;
+        height: 100px;
+        padding: 0px;
+        border: 1px solid #aaaaaa;
+    }
+    
+    #drag2 {
+        width: 120px;
+        height: 100px;
+        padding: 0px;
+        border: 1px solid #aaaaaa;
+    }
+    </style>
+    <script type="text/javascript">
+    function allowDrop(ev) {
+        ev.preventDefault();
+    }
+
+    function drag(ev) {
+        ev.dataTransfer.setData("Text", ev.target.id);
+    }
+
+    function drop(ev) {
+        ev.preventDefault();
+        var data = ev.dataTransfer.getData("Text");
+        ev.target.appendChild(document.getElementById(data));
+    }
+    </script>
+</head>
+
+<body>
+    <div style="font-size: 0px;">
+        <p>请把 lalala 的图片拖放到矩形中：</p>
+        <!-- 被放置位置的放置方式 -->
+        <div style="display: inline-block;" id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <div style="display: inline-block;" id="div2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+        <!-- 元素默认可拖拽 -->
+        <!-- ondragstart指定拖拽元素，通过srtData方法指定 -->
+        <img id="drag1" src="0.jpg" draggable="true" ondragstart="drag(event)" />
+        <img id="drag2" src="farm.jpg" draggable=" style="font-size: 0px;"true" ondragstart="drag(event)" />
+    </div>
+</body>
+
+</html>
